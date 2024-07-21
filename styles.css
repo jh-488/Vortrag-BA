@@ -1,0 +1,22 @@
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mtop {
+    margin-top: 50px;
+}
+
+.mbottom {
+    margin-bottom: 50px;
+}
+
+figcaption {
+    font-size: 1rem;
+}
+
+.border {
+    border: 2px solid black;
+    padding: 20px;
+}
