@@ -29,18 +29,6 @@ link:     ./styles.css
 ![PIC here]()
 
 
-# Agenda
-
-<!-- style="font-size: 2.5rem;"-->
-1. Einleitung
-2. Forschungsgegenstand
-3. Methodik
-4. Implementierung
-5. Ergebnisse
-6. Fazit
-7. Quellenangaben
-
-
 # Einleitung
 
 ## Hintergrund und Kontext
@@ -57,6 +45,7 @@ link:     ./styles.css
 
 <div class="flex">
     <img src="./images/remote_lab_eg.jpg" alt="Remote Lab Example"/>
+    <figcaption>Remote Labor Bild[1]</figcaption>
 </div>
 
 ## Problemdarstellung
@@ -71,7 +60,7 @@ link:     ./styles.css
 * kann die Lernumgebung weniger ansprechend sein 
 -->
 
-=> Integration von Gamification-Konzepten in Edrys, um die Motivation und Beteiligung der Studenten zu erhöhen
+**=> Integration von Gamification-Konzepten in Edrys, um die Motivation und Beteiligung der Studenten zu erhöhen**
 
 
 ## Ziele
@@ -84,9 +73,26 @@ link:     ./styles.css
 * Sicherstellung von Skalierbarkeit und Flexibilität
 
 
-# Forschungsgegenstand
+# Agenda
+
+<!-- style="font-size: 2rem; font-weight: 200;"-->
+1. Einleitung
+<!-- style="font-size: 2.5rem; font-weight: 600;"-->
+2. Verwandte Arbeiten
+3. Methodik
+4. Implementierung
+5. Ergebnisse
+6. Fazit
+
+
+# Verwandte Arbeiten
 
 Frühere Untersuchungen haben gezeigt, dass Remote Labs mit einem besseren Verständnis und einer besseren Erinnerung bei den Studenten verbunden sind, was bedeutet, dass sie neue Prinzipien bequemer lernen können als mit traditionellen Lernsystemen.
+
+<div class="flex mtop">
+    <img src="./images/related_work.webp" alt="Related Work Image"/>
+    <figcaption>Verwandte Arbeit Bild[2]</figcaption>
+</div>
 
 ## Remote Laboren Projekte
 
@@ -149,6 +155,11 @@ das eine direkte Bewertung der von den Studierenden eingereichten Arbeiten und e
 
 # Methodik
 
+<div class="flex">
+    <img style="height: 500px" src="./images/methodology_icon.jpg" alt="Methodology Icon"/>
+    <figcaption>Methodik-Symbol</figcaption>
+</div>
+
 ## Systemarchitektur
 
 + **Präsentationsschicht:** 
@@ -210,6 +221,11 @@ Gamifizierte Aufgaben:
 
 
 # Implementierung
+
+<div class="flex mtop">
+    <img src="./images/implementation_icon.jpg" alt="Implementation Icon"/>
+    <figcaption>Implementierung-Symbol</figcaption>
+</div>
 
 ## Einrichtung des zentralen Servers
 
@@ -455,7 +471,7 @@ const updatePlayersInRoom = () => {
 ### Turn On LED
 
 <div class="flex mbottom">
-    <img src="./images/Turn_On_Led_2.png" alt="Turn On LED"/>
+    <img src="./images/gifs/turnonled.gif" alt="Turn On LED"/>
     <figcaption>Turn On LED Lab</figcaption>
 </div>
 
@@ -477,7 +493,7 @@ Edrys.onMessage(({ from, subject, body, module }) => {
 ### Missing LED
 
 <div class="flex mbottom">
-    <img src="./images/Missing_LED.png" alt="Missing LED"/>
+    <img src="./images/gifs/missingled.gif" alt="Missing LED"/>
     <figcaption>Missing LED Lab</figcaption>
 </div>
 
@@ -524,7 +540,7 @@ Edrys.onMessage(({ from, subject, body }) => {
 ### RGB LED
 
 <div class="flex mbottom">
-    <img src="./images/RGB_LED.png" alt="RGB LED"/>
+    <img src="./images/gifs/rgbled.gif" alt="RGB LED"/>
     <figcaption>RGB LED Lab</figcaption>
 </div>
 
@@ -560,7 +576,7 @@ const finalCode = (chosenColor) => {
 ### Snake Game
 
 <div class="flex mbottom">
-    <img src="./images/Snake_Game_Multiplayer.png" alt="Snake Game"/>
+    <img src="./images/gifs/snakegame.gif" alt="Snake Game"/>
     <figcaption>Snake Game Lab (Multiplayer)</figcaption>
 </div>
 
@@ -628,7 +644,7 @@ void displaySadFace() {
     challengeType: time-restricted
 ```
 
-```javascript Deaktivierung des Code-Editors, wenn die Herausforderung zeitlich begrenzt ist
+```javascript Deaktivierung des Code-Editors, wenn die Aufgabe zeitlich begrenzt ist
 Edrys.onReady (() = > {
   if ( Edrys.module.challengeType === "time-restricted") {
     disableEditor();
@@ -639,3 +655,181 @@ Edrys.onReady (() = > {
 
 
 # Ergebnisse
+
+<div class="flex mtop">
+    <img src="./images/results_icon.png" alt="Results Icon"/>
+    <figcaption>Ergebnisse-Symbol</figcaption>
+</div>
+
+## Bewertung der Leistung
+
++ **Unit Tests:**
+
+  + Methode zum Testen kleiner Codestücke (Funktionen...)
+
+  + Frühzeitiges Erkennen und Isolieren von Fehlern
+
+  + Jest
+
+```javascript Ein Beispiel für einen Unit-Test mit Jest
+test("changeTab hides and shows containers correctly", () => {
+    const showContainers = [document.createElement("div")];
+    const hideContainers = [document.createElement("div")];
+    const displayStyle = "flex";
+
+    // Simulate initial state 
+    showContainers[0].style.display = "none";
+    hideContainers[0].style.display = "block";
+
+    changeTab(showContainers, hideContainers, displayStyle);
+
+    expect(showContainers[0].style.display).toBe(displayStyle);
+    expect(hideContainers[0].style.display).toBe("none");
+});
+```
+
+<div class="flex mbottom">
+    <img style="width: 700px" src="./images/timer_test.png" alt="Test summary for the Timer Module"/>
+    <figcaption>Testzusammenfassung für das Timer-Modul</figcaption>
+</div>
+
+<div class="flex mbottom">
+    <img style="width: 700px" src="./images/multi_test.png" alt="Test summary for the Multiplayer Tab Module"/>
+    <figcaption>Testzusammenfassung für das Multiplayer-Tab-Modul</figcaption>
+</div>
+
+
++ **Integrationstests:**
+
+  + Zu testen, wie die verschiedenen Komponenten miteinander funktionieren
+
+  + Identifizierung der Konflikte zwischen den Elementen 
+
+  + Bewertung der verschiedenen möglichen Szenarien
+
+
+
+## Engagement und Feedback der Nutzer
+
+<div class="flex mbottom">
+    <img src="./images/survey_setup.jpg" alt="Setup of the survey labs"/>
+    <figcaption>Einrichtung der Umfragelabore</figcaption>
+</div>
+
+
+<div class="flex mbottom">
+    <img class="border" src="./images/edrys_survey/skill_lvl.png" alt="Arduino programming level of the students"/>
+    <figcaption>Arduino-Programmierkenntnisse der Studenten</figcaption>
+</div>
+
+
+<div class="flex mbottom">
+    <img class="border" src="./images/edrys_survey/how_fun.png" alt="Diagram to illustrate how enjoyable were the labs"/>
+    <figcaption>Diagramm zur Veranschaulichung, wie unterhaltsam die Labore waren (1: „So viel Spaß“, 5: „Langweilig“)</figcaption>
+</div>
+
+
+<div class="flex mbottom">
+    <img class="border" src="./images/edrys_survey/best_one.png" alt="A comparison of the different challenges"/>
+    <figcaption>Ein Vergleich der verschiedenen Aufgaben</figcaption>
+</div>
+
+
+--> **Vorschlag**: die Spieler können gleichzeitig mit der Lösung der Aufgabe beginnen, so dass ein Spieler nicht warten muss, bis er an der Reihe ist.
+
+
+## Auswertung der Ergebnisse
+
+* Positives Feedback von den Studenten
+* Effektive Motivation der Studenten durch die Gamification-Elemente wie einen Timer, einen Multiplayer-Modus und interaktives Feedback 
+* Ausgangspunkt für die Entwicklung und den Einsatz von Gamification-Konzepten für Remote Labs in eingebetteten Systemen 
+
+**--> Das am meisten geschätzte Konzept war die sofortige Rückmeldung der Antworten an die Benutzer.**
+
+> “Die automatisierten Tests zeigen am Ende Erfolg oder Misserfolg.”
+>
+> “Sie erhalten eine direkte visuelle Rückmeldung darüber, ob etwas richtig oder falsch ist.”
+>
+> “Sie erhalten schnelles Feedback für den Code an einem realen Beispiel. Das Programmieren fühlt sich realer und sinnvoller an.”
+>
+> -- Antworten der Studenten auf die Frage, welches Element ihnen am besten gefallen hat
+
+
+
+# Fazit
+
+<div class="flex">
+    <img src="./images/conclusion_icon.png" alt="Conclusion Icon"/>
+    <figcaption>Fazit-Symbol</figcaption>
+</div>
+
+## Erreichung der Ziele
+
++ **Förderung des Engagements von Studenten**
+
+  + Gestaltung interaktiver Aufgaben, gekoppelt mit einem unmittelbaren Feedback-Mechanismus 
+
+  + Erzielung einer angenehmeren und dynamischeren Atmosphäre
+
+  + Unterstützung der Lernenden beim Erkennen ihrer Fehler durch sofortiges Feedback
+
++ **Demonstration der Wirksamkeit von Gamification**
+
+  + Die Studierenden fanden die spielerischen Übungen im Vergleich zu traditionellen Lernmethoden angenehmer und ansprechender
+
+  + Der gamifizierte Ansatz ist sowohl unterhaltsam als auch lehrreich
+
++ **Bereitstellung eines funktionalen und zuverlässigen Systems**
+
+  + Bereitstellung einer reibungslosen und freundlichen Benutzererfahrung
+
+  + Die entwickelten Komponenten können leicht integriert oder weiterentwickelt werden
+
+
+## Herausforderungen
+
+<!-- style="font-size: 2rem;"-->
+* Aufgaben Design
+* Feedback in Echtzeit
+* Server-Leistung
+* Entwicklung gamifizierter Elemente
+
+
+## Beschränkungen und zukünftige Arbeiten
+
++ **Stichprobengröße und Vielfalt der an der Umfrage teilnehmenden Studenten**
+
+  + Die aktuelle Studie basiert auf einer relativ kleinen Gruppe von Teilnehmern
+
+  + Die Ergebnisse konnten nicht verallgemeinert werden
+
+  --> Künftige Studien sollten sich an größere und vielfältige Gruppen richten, die mehr Tester mit unterschiedlichem Hintergrund, Programmierkenntnissen und akademischem Niveau umfassen.
+
++ **Entwurf und Entwicklung von kollaborativen Aufgaben**
+
+  + Lernenden können in einem Team arbeiten, um ein Problem zu lösen
+
++ **Hinzufügung eines Backend-Servers, der mit einer Datenbank verbunden ist**
+
+  + Verbesserung der Entwicklung von Modulen
+
+  + Einführung neuer Konzepte (Benutzerprofilseite...)
+
+  + Integration eines Punktesystems (Punkte, Abzeichen, Bestenlisten...)
+
+
+
+
+# ‎ 
+
+<div class="flex">
+    <img style="width: 800px" src="./images/gifs/turnonled_multi.gif" alt="Turn On LED Lab in Multiplayer Mode"/>
+    <figcaption>Turn On LED im Multiplayer-Modus</figcaption>
+</div>
+
+
+
+# Quellenangaben
+
+* [1] https://www.nsta.org/science-teacher/science-teacher-julyaugust-2021-0/remote-labs-20-rescue
+* [2] https://www.seattletimes.com/explore/careers/knowing-when-and-how-to-compromise-at-work/
