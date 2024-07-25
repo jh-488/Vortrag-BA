@@ -28,33 +28,29 @@ link:     ./styles.css
 | **Autor**         | `Jihad Hyadi`                                                   |
 | **Betreuer**      | `Prof. Dr. Sebastian Zug, Dr. André Dietrich`                   |
 
-![PIC here]()
-
 
 # Einleitung
 
-## Hintergrund und Kontext
+<!-- style="font-size: 2rem;"-->
+* **Hintergrund und Kontext**
 
-* Der Einsatz von Remote Laboren in der Ausbildung hat stark zugenommen.
-* Edrys, eine Plattform für Remote-Laboren, bietet Studierenden die Möglichkeit, Mikrocontroller aus der Ferne zu steuern und zu programmieren. 
-* Gamification ist weithin als erfolgreiche Strategie zur Förderung des Engagements und der Beteiligung.
+  <!-- style="font-size: 1.5rem;"-->
+  - Der Einsatz von Remote Laboren in der Ausbildung hat stark zugenommen.
+  - Edrys, eine Plattform für Remote-Laboren, bietet Studierenden die Möglichkeit, Mikrocontroller aus der Ferne zu steuern und zu programmieren. 
+  - Gamification ist weithin als erfolgreiche Strategie zur Förderung des Engagements und der Beteiligung.
 
 <!-- --{{1}}--
 * insbesondere in Bereichen wie eingebetteten Systemen, wo der Zugang zu physischer Hardware eingeschränkt sein kann. 
 * wodurch der Bedarf an physischer Hardware entfällt.
 * in verschiedenen Bereichen wie der Bildung anerkannt. 
 -->
+<!-- style="font-size: 2rem;"-->
+* **Problemdarstellung**
 
-<div class="flex">
-    <img src="./images/remote_lab_eg.jpg" alt="Remote Lab Example"/>
-    <figcaption>Remote Labor Bild[1]</figcaption>
-</div>
-
-## Problemdarstellung
-
-* Abwesenheit von physischem Kontakt oder direkter Manipulation der Hardware 
-* Traditionelle Aufgaben von Remote Laboren vermissen Aspekte der Motivation und Interaktion
-* Fehlen von sofortigem Feedback
+  <!-- style="font-size: 1.5rem;"-->
+  - Abwesenheit von physischem Kontakt oder direkter Manipulation der Hardware 
+  - Traditionelle Aufgaben von Remote Laboren vermissen Aspekte der Motivation und Interaktion
+  - Fehlen von sofortigem Feedback
 
 <!-- --{{1}}--
 * kann bei den Lernenden zu einem Gefühl der Abgehobenheit führen, so dass das Verständnis komplexer Konzepte noch schwieriger wird
@@ -73,6 +69,11 @@ link:     ./styles.css
 * Bereitstellung unmittelbares Feedback
 * Bewertung von Benutzerfreundlichkeit und Benutzererfahrung
 * Sicherstellung von Skalierbarkeit und Flexibilität
+
+<div class="flex">
+    <img src="./images/remote_lab_eg.jpg" alt="Remote Lab Example"/>
+    <figcaption>Remote Labor Bild[1]</figcaption>
+</div>
 
 
 # Agenda
@@ -98,16 +99,17 @@ Frühere Untersuchungen haben gezeigt, dass Remote Labs mit einem besseren Verst
 
 ## Remote Laboren Projekte
 
-### Project MICRO
+~~Project MICRO~~
+--------------------
 
-* MICRO, The Remote Microprocessor Lab
-* entwickelt von Studierenden der Informatik, Ingenieurinformatik und Elektrotechnik an der Technischen Hochschule Mittelhessen in Gießen
-* Fernzugriff auf mehrere Labore durch Verbindung mit einer virtuellen Maschine
-* MICRO-Cube setup
+- MICRO, The Remote Microprocessor Lab
+- entwickelt von Studierenden der Informatik, Ingenieurinformatik und Elektrotechnik an der Technischen Hochschule Mittelhessen in Gießen
+- Fernzugriff auf mehrere Labore durch Verbindung mit einer virtuellen Maschine
+- MICRO-Cube setup
 
 <div class="flex mbottom">
     <img class="border" style="width: 350px" src="./images/micro_cube.png" alt="Micro Cube Prototype"/>
-    <figcaption>Prototyp eines MICRO Cube</figcaption>
+    <figcaption>Prototyp eines MICRO Cube[3]</figcaption>
 </div>
 
 -> **Fehlen eines automatischen Einreichungssystems**
@@ -116,16 +118,16 @@ Frühere Untersuchungen haben gezeigt, dass Remote Labs mit einem besseren Verst
 das eine direkte Bewertung der von den Studierenden eingereichten Arbeiten und eine sofortige Rückmeldung ermöglicht 
 -->
 
+~~Edrys~~
+--------------------
 
-### Edrys
-
-* Einfache Einrichtung und gemeinsame Nutzung von Remote Laboren
-* Klassenbildung durch Kombination von Modulen
-* Einfache Echtzeit-API zur Erstellung von Modulen (Edrys.js API)
+- Einfache Einrichtung und gemeinsame Nutzung von Remote Laboren
+- Klassenbildung durch Kombination von Modulen
+- Einfache Echtzeit-API zur Erstellung von Modulen (Edrys.js API)
 
 <div class="flex mbottom">
     <img class="border" style="height: 300px" src="./images/edrys_arduino_lab.png" alt="Edrys Arduino Lab"/>
-    <figcaption>Beispiel für eine Edrys-Einrichtung</figcaption>
+    <figcaption>Beispiel für eine Edrys-Einrichtung[4]</figcaption>
 </div>
 
 -> **Aufrechterhaltung eines hohen Engagements und Motivation der Studenten**
@@ -133,25 +135,28 @@ das eine direkte Bewertung der von den Studierenden eingereichten Arbeiten und e
 
 ## Gamified Remote Laboren Projekte
 
-### RALfie Project
+* ~~RALfie Project~~
+--------------------
 
-* The Remote Access Labs for Fun, Innovation and Education
-* 2013, an der University of Southern Queensland in Australien 
-* Steigerung des Engagements junger Lernender in den MINT-Fächern
-* Gamifizierte Elemente: Punkte, Stufen und Abzeichen
+- The Remote Access Labs for Fun, Innovation and Education
+- 2013, an der University of Southern Queensland in Australien 
+- Steigerung des Engagements junger Lernender in den MINT-Fächern
+- Gamifizierte Elemente: Punkte, Stufen und Abzeichen
 
 <div class="flex">
     <img style="width: 400px" src="./images/ralfie_ui.png" alt="Ralfie UI"/>
-    <figcaption>RALfie Benutzeroberfläche</figcaption>
+    <figcaption>RALfie Benutzeroberfläche[5]</figcaption>
 </div>
 
 -> **einige Lernende hatten Schwierigkeiten, die Plattform zu nutzen, da der Inhalt nicht einfach zu verstehen war.**
 
-### Gamified Remote Labs for Engineering Students
+* ~~Gamified Remote Labs for Engineering Students~~
+--------------------
 
-* 2021, während der Zeit der Covid-19-Pandemie, von Forschern der Universität Loughborough im United Kingdom
-* eine Reihe von virtuellen Experimenten für Maschinenbaustudenten
-* Die Übungen wurden in aufsteigender Reihenfolge der Schwierigkeit eingesetzt
+- 2021, während der Zeit der Covid-19-Pandemie, von Forschern der Universität Loughborough im United Kingdom
+- eine Reihe von virtuellen Experimenten für Maschinenbaustudenten
+- Die Übungen wurden in aufsteigender Reihenfolge der Schwierigkeit eingesetzt
+
 -> **Verwendung von Fragen unterschiedlicher Art**
 
 
@@ -316,7 +321,7 @@ uploadSketch = (port, sketchPath) => {
 
 **Beispiel:**
 
-1. Schritt
+1.Schritt
 
 ```c Ein Sketch zum Einschalten der eingebauten LED
 void setup () {
@@ -328,7 +333,7 @@ void loop () {
 }
 ```
 
-2. Schritt
+2.Schritt
 
 <!-- data-marker="
 0 0 0 100 rgba(55,255,100,0.5) text;
@@ -348,14 +353,14 @@ void setup () {
 void loop () {
   digitalWrite(LED_BUILTIN, HIGH);
   Test::run();
-  }
+}
 
 test(turnOnLed){
   assertEqual(digitalRead(LED_BUILTIN), HIGH);
 }
 ```
 
-3. Schritt
+3.Schritt
 
 ``` Eine Testzusammenfassung für den Test
 Test summary: 1 passed , 0 failed , 0 skipped , out of 1 test(s) .
@@ -363,6 +368,10 @@ Test summary: 1 passed , 0 failed , 0 skipped , out of 1 test(s) .
 
 
 ## Entwicklung von Modulen
+
+* Ein Edrys-Modul ist eine Webseite, die mit HTML, CSS und JavaScript erstellt wird
+* Einfache Integration in Edrys-Klassenräume
+* Bewahrung einer benutzerfreundlichen Erfahrung
 
 ### Code Editor
 
@@ -469,6 +478,10 @@ const updatePlayersInRoom = () => {
 
 
 ## Entwicklung der gamifizierter Aufgaben
+
+* 4 verschiedene Arten von Aufgaben
+* Integration von Gamification-Elementen in die Edrys-Plattform 
+* Verbesserung des studentischen Engagements und der Lernergebnisse
 
 ### Turn On LED
 
@@ -628,7 +641,6 @@ void displaySadFace() {
 - url: https://jh-488.github.io/Edrys_Code_Editor/index.html
     config:
       editorText: |
-        /*
         void setup() {
 
         }
@@ -835,3 +847,6 @@ test("changeTab hides and shows containers correctly", () => {
 
 * [1] https://www.nsta.org/science-teacher/science-teacher-julyaugust-2021-0/remote-labs-20-rescue
 * [2] https://www.seattletimes.com/explore/careers/knowing-when-and-how-to-compromise-at-work/
+* [3] Micro: The remote microprocessor lab.  https://doi.org/10.33968/2023.36
+* [4] Adaptable digital labs - motivation and vision of the crosslab project, p. https://ieeexplore.ieee.org/document/9942759
+* [5] Using gamification to create opportunities for engagement, collaboration and communication in a peer-to-peer environment for making and using remote access labs. https://ieeexplore.ieee.org/document/7463271
