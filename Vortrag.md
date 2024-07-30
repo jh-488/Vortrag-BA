@@ -35,15 +35,10 @@ link:     ./styles.css
 * **Hintergrund und Kontext**
 
   <!-- style="font-size: 1.5rem;"-->
-  - Der Einsatz von Remote Laboren in der Ausbildung hat stark zugenommen.
-  - Edrys, eine Plattform für Remote-Laboren, bietet Studierenden die Möglichkeit, Mikrocontroller aus der Ferne zu steuern und zu programmieren. 
-  - Gamification ist weithin als erfolgreiche Strategie zur Förderung des Engagements und der Beteiligung.
+  - Der Einsatz von Remote Laboren in der Ausbildung hat stark zugenommen[4]
+  - Edrys, eine Plattform für Remote-Laboren, bietet Studierenden die Möglichkeit, Mikrocontroller aus der Ferne zu steuern und zu programmieren
+  - Gamification ist weithin als erfolgreiche Strategie zur Förderung des Engagements und der Beteiligung[6]
 
-<!-- --{{1}}--
-* insbesondere in Bereichen wie eingebetteten Systemen, wo der Zugang zu physischer Hardware eingeschränkt sein kann. 
-* wodurch der Bedarf an physischer Hardware entfällt.
-* in verschiedenen Bereichen wie der Bildung anerkannt. 
--->
 <!-- style="font-size: 2rem;"-->
 * **Problemdarstellung**
 
@@ -52,11 +47,6 @@ link:     ./styles.css
   - Traditionelle Aufgaben von Remote Laboren vermissen Aspekte der Motivation und Interaktion
   - Fehlen von sofortigem Feedback
 
-<!-- --{{1}}--
-* kann bei den Lernenden zu einem Gefühl der Abgehobenheit führen, so dass das Verständnis komplexer Konzepte noch schwieriger wird
-* die wichtig sind, um ein ausreichendes Wissen über bestimmte komplexe Themen zu erlangen und das Interesse der Teilnehmer zuerhalten.
-* kann die Lernumgebung weniger ansprechend sein 
--->
 
 **=> Integration von Gamification-Konzepten in Edrys, um die Motivation und Beteiligung der Studenten zu erhöhen**
 
@@ -82,17 +72,14 @@ link:     ./styles.css
 1. Einleitung
 <!-- style="font-size: 2.5rem; font-weight: 600;"-->
 2. Verwandte Arbeiten
-3. Methodik
-4. Implementierung
-5. Ergebnisse
-6. Fazit
+3. Methodik und Implementierung
+4. Ergebnisse
+5. Fazit
 
 
 # Verwandte Arbeiten
 
-Frühere Untersuchungen haben gezeigt, dass Remote Labs mit einem besseren Verständnis und einer besseren Erinnerung bei den Studenten verbunden sind, was bedeutet, dass sie neue Prinzipien bequemer lernen können als mit traditionellen Lernsystemen.
-
-<div class="flex mtop">
+<div class="flex">
     <img src="./images/related_work.webp" alt="Related Work Image"/>
     <figcaption>Verwandte Arbeit Bild[2]</figcaption>
 </div>
@@ -160,81 +147,18 @@ das eine direkte Bewertung der von den Studierenden eingereichten Arbeiten und e
 -> **Verwendung von Fragen unterschiedlicher Art**
 
 
-# Methodik
-
-<div class="flex">
-    <img style="height: 500px" src="./images/methodology_icon.jpg" alt="Methodology Icon"/>
-    <figcaption>Methodik-Symbol</figcaption>
-</div>
-
-## Systemarchitektur
-
-+ **Präsentationsschicht:** 
-
-  + Benutzeroberfläche, mit der die Studenten interagieren
-
-  + Edrys modules
-
-  + HTML, CSS, JavaScript
-
-+ **Anwendungsschicht:**
-
-  + Kernfunktionalitäten des Systems
-
-  + Verbindung zwischen mehreren Modulen
-
-  + Bearbeitung von Benutzeranfragen in der der Server 
-
-+ **Datenebene:**
-  
-  + Unterschicht der Präsentations- und Anwendungsschicht
-
-  + Nutzer können Daten wie die für die Lösung einer Aufgabe benötigte Zeit oder Feedback einsehen
-
-  + Ein Sketch, das auf das Board hochgeladen werden muss, wird auf dem Server gespeichert 
-
-
-## Hauptbestandteile
-
-Zentraler Server:
-================
-
-* Entwicklung eines Servers, der sowohl unter Linux als auch unter Windows funktioniert
-* Ermöglichung von Code-Tests für Feedback
-* Entwicklung mit Node js
-
-**--> Eine schnelle Alternative, um Code von Edrys zu empfangen und auf das Board zu laden**
-
-Module:
-================
-
-* Code editor
-* Timer
-* Multiplayer Tab
-
-**--> Bereitstellung einer ansprechenden Erfahrung für Remote-Laboren**
-
-Gamifizierte Aufgaben:
-================
-
-| Name          | Schwierigkeitsgrad |  Erforderliche Module                        | Erforderliche Hardware                                        | 
-| ------------- | :----------------: | :------------------------------------------: | :-----------------------------------------------------------: |
-| Turn On LED   | leicht             | Code Editor, Timer, Video Stream             | Arduino Uno                                                   |
-| Missing LED   | mittelschwierig    | Code Editor, Missing LED Modul, Video Stream | Arduino Uno, Breadboard, 3 LEDS, 3 Resistors, 4 Jumper Wires  |
-| RGB LED       | leicht             | RGB LED Modul, Video Stream                  | Arduino Uno, Breadboard, RGB LED, 3 Resistors, 4 Jumper Wires |
-| Snake Game    | schwierig          | Code Editor, Video Stream                    | Arduino Uno, 8x8 LED Matrix, 5 Jumper Wires                   |
-
-**--> Umsetzung verschiedener Ansätze, um herauszufinden, welcher am besten geeignet ist, das Engagement der Lernenden aufrechtzuerhalten**
-
-
-# Implementierung
+# Methodik und Implementierung
 
 <div class="flex mtop">
     <img src="./images/implementation_icon.jpg" alt="Implementation Icon"/>
     <figcaption>Implementierung-Symbol</figcaption>
 </div>
 
-## Einrichtung des zentralen Servers
+## Zentraler Server
+
+* Entwicklung eines Servers, der sowohl unter Linux als auch unter Windows funktioniert
+* Ermöglichung von Code-Tests für Feedback
+* Entwicklung mit Node js
 
 <div class="flex mbottom">
     <img src="./images/server_implementation.png" alt="Server Implementation"/>
@@ -248,7 +172,7 @@ node index.js --core "CORE_NAME" --port "PORT_NAME"
 (node index.js --core arduino:avr:uno --port COM3)
 
 
-### Empfangen und Hochladen von Code
+### Hochladen von Code
 
 ```javascript Eine Funktion zum Kompilieren eines Arduino-Sketches
 compileSketch = (sketchPath) => {
@@ -321,7 +245,7 @@ uploadSketch = (port, sketchPath) => {
 
 **Beispiel:**
 
-1.Schritt
+~~1. Schritt~~
 
 ```c Ein Sketch zum Einschalten der eingebauten LED
 void setup () {
@@ -333,7 +257,7 @@ void loop () {
 }
 ```
 
-2.Schritt
+~~2. Schritt~~
 
 <!-- data-marker="
 0 0 0 100 rgba(55,255,100,0.5) text;
@@ -360,14 +284,14 @@ test(turnOnLed){
 }
 ```
 
-3.Schritt
+~~3. Schritt~~
 
 ``` Eine Testzusammenfassung für den Test
 Test summary: 1 passed , 0 failed , 0 skipped , out of 1 test(s) .
 ```
 
 
-## Entwicklung von Modulen
+## Module
 
 * Ein Edrys-Modul ist eine Webseite, die mit HTML, CSS und JavaScript erstellt wird
 * Einfache Integration in Edrys-Klassenräume
@@ -477,7 +401,7 @@ const updatePlayersInRoom = () => {
 </div>
 
 
-## Entwicklung der gamifizierter Aufgaben
+## Gamifizierte Aufgaben
 
 * 4 verschiedene Arten von Aufgaben
 * Integration von Gamification-Elementen in die Edrys-Plattform 
@@ -660,7 +584,7 @@ void displaySadFace() {
 
 ```javascript Deaktivierung des Code-Editors, wenn die Aufgabe zeitlich begrenzt ist
 Edrys.onReady (() = > {
-  if ( Edrys.module.challengeType === "time-restricted") {
+  if (Edrys.module.challengeType === "time-restricted") {
     disableEditor();
   }
 })
@@ -795,7 +719,7 @@ test("changeTab hides and shows containers correctly", () => {
 
 + **Bereitstellung eines funktionalen und zuverlässigen Systems**
 
-  + Bereitstellung einer reibungslosen und freundlichen Benutzererfahrung
+  + Bereitstellung einer freundlichen Benutzererfahrung
 
   + Die entwickelten Komponenten können leicht integriert oder weiterentwickelt werden
 
@@ -850,3 +774,69 @@ test("changeTab hides and shows containers correctly", () => {
 * [3] Micro: The remote microprocessor lab.  https://doi.org/10.33968/2023.36
 * [4] Adaptable digital labs - motivation and vision of the crosslab project, p. https://ieeexplore.ieee.org/document/9942759
 * [5] Using gamification to create opportunities for engagement, collaboration and communication in a peer-to-peer environment for making and using remote access labs. https://ieeexplore.ieee.org/document/7463271
+* [6] Using game design elements in non-gaming contexts.  https://doi.org/10.1145/1979742.1979575
+
+
+
+
+
+# Zusätzliche Folien
+
+## Systemarchitektur
+
++ **Präsentationsschicht:** 
+
+  + Benutzeroberfläche, mit der die Studenten interagieren
+
+  + Edrys modules
+
+  + HTML, CSS, JavaScript
+
++ **Anwendungsschicht:**
+
+  + Kernfunktionalitäten des Systems
+
+  + Verbindung zwischen mehreren Modulen
+
+  + Bearbeitung von Benutzeranfragen in der Server 
+
++ **Datenschicht:**
+  
+  + Unterschicht der Präsentations- und Anwendungsschicht
+
+  + Nutzer können Daten wie die für die Lösung einer Aufgabe benötigte Zeit oder Feedback einsehen
+
+  + Ein Sketch, das auf das Board hochgeladen werden muss, wird auf dem Server gespeichert 
+
+
+## Hauptbestandteile
+
+Zentraler Server:
+================
+
+* Entwicklung eines Servers, der sowohl unter Linux als auch unter Windows funktioniert
+* Ermöglichung von Code-Tests für Feedback
+* Entwicklung mit Node js
+
+**--> Eine schnelle Alternative, um Code von Edrys zu empfangen und auf das Board zu laden**
+
+Module:
+================
+
+* Code editor
+* Timer
+* Multiplayer Tab
+
+**--> Bereitstellung einer ansprechenden Erfahrung für Remote-Laboren**
+
+Gamifizierte Aufgaben:
+================
+
+| Name          | Schwierigkeitsgrad |  Erforderliche Module                        | Erforderliche Hardware                                        | 
+| ------------- | :----------------: | :------------------------------------------: | :-----------------------------------------------------------: |
+| Turn On LED   | leicht             | Code Editor, Timer, Video Stream             | Arduino Uno                                                   |
+| Missing LED   | mittelschwierig    | Code Editor, Missing LED Modul, Video Stream | Arduino Uno, Breadboard, 3 LEDS, 3 Resistors, 4 Jumper Wires  |
+| RGB LED       | leicht             | RGB LED Modul, Video Stream                  | Arduino Uno, Breadboard, RGB LED, 3 Resistors, 4 Jumper Wires |
+| Snake Game    | schwierig          | Code Editor, Video Stream                    | Arduino Uno, 8x8 LED Matrix, 5 Jumper Wires                   |
+
+**--> Umsetzung verschiedener Ansätze, um herauszufinden, welcher am besten geeignet ist, das Engagement der Lernenden aufrechtzuerhalten**
