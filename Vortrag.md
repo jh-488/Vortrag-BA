@@ -761,8 +761,8 @@ test("changeTab hides and shows containers correctly", () => {
 # ‎ 
 
 <div class="flex">
-    <img style="width: 800px" src="./images/gifs/turnonled_multi.gif" alt="Turn On LED Lab in Multiplayer Mode"/>
-    <figcaption>Turn On LED im Multiplayer-Modus</figcaption>
+    <img style="width: 800px" src="./images/gifs/snake_game.gif" alt="Snake Game"/>
+    <figcaption>Snake Game</figcaption>
 </div>
 
 
